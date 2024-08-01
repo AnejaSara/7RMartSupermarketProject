@@ -16,12 +16,12 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//div[@class='card']/div[@class='card-body login-card-body']") WebElement logincard;
-	@FindBy(xpath="//input[@name='username']") WebElement usernameField;
-	@FindBy(xpath="//input[@name='password']") WebElement passwordField;
-	@FindBy(xpath="//button[text()='Sign In']") WebElement signInButton;
-	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") WebElement redAlertbox;
-	@FindBy(xpath="//li[@class='breadcrumb-item active' and text()='Dashboard']") WebElement dashboardLabel;
+	@FindBy(xpath="//div[@class='card']/div[@class='card-body login-card-body']") private WebElement logincard;
+	@FindBy(xpath="//input[@name='username']") private WebElement usernameField;
+	@FindBy(xpath="//input[@name='password']") private WebElement passwordField;
+	@FindBy(xpath="//button[text()='Sign In']") private WebElement signInButton;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") private WebElement redAlertbox;
+	@FindBy(xpath="//li[@class='breadcrumb-item active' and text()='Dashboard']") private WebElement dashboardLabel;
 
 public LoginPage enterUsernameOnUsernameField(String username) {
 

@@ -1,16 +1,14 @@
 package pages;
 
-import static org.testng.Assert.assertTrue;
+
 
 import java.util.List;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import utilities.WaitUtility;
 
 public class ListProductsSearchPage {
 	
@@ -20,12 +18,12 @@ public class ListProductsSearchPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-product' and @class=' nav-link' ]") WebElement manageproductlink;
-    @FindBy(xpath="//a[@onclick='click_button(2)']") WebElement pagesearchbutton;
-    @FindBy(xpath="//div[@class='card-body']/descendant::input[@name='un']") WebElement titlefield;
-    @FindBy(xpath = "//button[@type='submit' and @name='Search']") WebElement productsearchbutton;
-    @FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr") List<WebElement> productsearchresult;
-    @FindBy(xpath="//div[@class='dropdown']/ul[@class='dropdown-menu show']/li") List<WebElement> productList;
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-product' and @class=' nav-link' ]") private WebElement manageproductlink;
+    @FindBy(xpath="//a[@onclick='click_button(2)']") private WebElement pagesearchbutton;
+    @FindBy(xpath="//div[@class='card-body']/descendant::input[@name='un']") private WebElement titlefield;
+    @FindBy(xpath = "//button[@type='submit' and @name='Search']") private WebElement productsearchbutton;
+    @FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr") private List<WebElement> productsearchresult;
+    @FindBy(xpath="//div[@class='dropdown']/ul[@class='dropdown-menu show']/li") private List<WebElement> productList;
    
     
     
