@@ -1,5 +1,8 @@
 package utilities;
 
+import java.util.List;
+import java.util.Random;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -76,5 +79,27 @@ public class PageUtility {
 		 Actions actions=new Actions(driver);
 	    actions.contextClick(rightClickElement).build().perform();
 	 }
+	 
+	 public boolean isElementVisible(WebElement elementToCheckVisibility)
+	 {
+		 if(elementToCheckVisibility.isDisplayed())
+		 return true;
+		 else
+		return false;
+	 }
+	 
+	 
+	 public boolean elementListIterator(WebDriver driver, List<WebElement> listXpath, String searchElement ) {
+		 boolean elementFound=false;
+		 List<WebElement> elementList=listXpath;
+			for(WebElement currentElement:elementList) {
+				String elementText=currentElement.getText();
+				if(searchElement.equals(elementText)) {
+					elementFound=true;
+					break;
+				}}
+			return elementFound;
+			}
+	 
 	 
 }

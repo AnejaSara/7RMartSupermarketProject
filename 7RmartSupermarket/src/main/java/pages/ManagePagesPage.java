@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.FileUtility;
+import utilities.PageUtility;
 import utilities.WaitUtility;
 
 public class ManagePagesPage {
@@ -131,14 +132,8 @@ public class ManagePagesPage {
 	}
 	
 	public boolean verifyNewlyAddedPageInPageListUsingTitle(String searchTitle) {
-		boolean titleListed=false;
-		for(WebElement currentTitle:titleColumnList) {
-			String getTitle=currentTitle.getText();
-			if(searchTitle.equals(getTitle)) {
-				titleListed=true;
-				break;
-			}}
-		return titleListed;
-		}
-	
+		PageUtility pageutility=new PageUtility();
+		boolean elementListed=pageutility.elementListIterator(driver, titleColumnList, searchTitle);
+		return elementListed;
+	}
 }

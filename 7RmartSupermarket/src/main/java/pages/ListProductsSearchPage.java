@@ -4,7 +4,7 @@ package pages;
 
 import java.util.List;
 
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -57,7 +57,10 @@ public class ListProductsSearchPage {
     }
     
     public ListProductsSearchPage searchByProductId(String productid) {
-    	String xpathwithproductid="//button[text()='"+productid+"']/parent::td/following-sibling::td/a[contains(@href, 'delete') and contains(@onclick, 'delete')]";
+    	String replaceElement=productid;
+    	String xpathstring="//button[text()='"+replaceElement+"']/parent::td/following-sibling::td/a[contains(@href, 'delete') and contains(@onclick, 'delete')]";
+    	WebElement xpathwithproduct=driver.findElement(By.xpath(xpathstring));
+    	xpathwithproduct.click();
     	return this;
     }
 

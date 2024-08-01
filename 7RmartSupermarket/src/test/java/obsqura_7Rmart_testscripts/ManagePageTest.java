@@ -31,10 +31,10 @@ public class ManagePageTest extends Base{
 	public void verifyUserIsAbleToAddNewPages() {
 		String username=ExcelUtility.getString(1, 0, "LoginPage");
 		String password=ExcelUtility.getString(1, 1, "LoginPage");
-		String pagetitle=ExcelUtility.getString(1, 1, "ManagePages");;
-		String description=ExcelUtility.getString(1, 2, "ManagePages");;
-		String pagename=ExcelUtility.getString(1, 3, "ManagePages");;
-		String filepath=ExcelUtility.getString(1, 4, "ManagePages");;
+		String pagetitle=ExcelUtility.getString(1, 1, "ManagePages");
+		String description=ExcelUtility.getString(1, 2, "ManagePages");
+		String pagename=ExcelUtility.getString(1, 3, "ManagePages");
+		String filepath=ExcelUtility.getString(1, 4, "ManagePages");
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.waitForLoginCard().enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnSignInButton();
 		boolean isHomePageNavigated= loginpage.verifyHomePageNavigated();
