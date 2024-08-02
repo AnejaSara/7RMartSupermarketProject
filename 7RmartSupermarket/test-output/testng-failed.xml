@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="Browser" value="chrome"/>
+  <listeners>
+    <listener class-name="listeners.Listener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="obsqura_7Rmart_testscripts.LoginTest">
+        <methods>
+          <include name="browserQuit"/>
+          <include name="verifyLoginforCorrectUsernameAndCorrectPassword"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- obsqura_7Rmart_testscripts.LoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
