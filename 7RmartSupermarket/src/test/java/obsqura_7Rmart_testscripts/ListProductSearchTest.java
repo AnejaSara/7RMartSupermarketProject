@@ -3,15 +3,12 @@ package obsqura_7Rmart_testscripts;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
 import pages.ListProductsSearchPage;
 import pages.LoginPage;
 import utilities.ConstantsFile;
 import utilities.ExcelUtility;
-import utilities.WaitUtility;
+
 
 public class ListProductSearchTest extends Base {
 	@Test(priority=1)

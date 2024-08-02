@@ -1,16 +1,14 @@
 package obsqura_7Rmart_testscripts;
 
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
-
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import retry.Retry;
 
 public class LoginTest extends Base{
 
-	@Test(priority=1, description="This is for login with valid credentials",groups= {"smoke", "regression"}, retryAnalyzer=retry.Retry.class)
+	@Test(priority=1, description="This is for login with valid credentials",groups= {"smoke", "regression"}, retryAnalyzer=Retry.class)
 	public void verifyLoginforCorrectUsernameAndCorrectPassword() {
 		String username=ExcelUtility.getString(1, 0, "LoginPage");
 		String password=ExcelUtility.getString(1, 1, "LoginPage");
@@ -20,7 +18,7 @@ public class LoginTest extends Base{
 		assertTrue(isHomePageNavigated, "User is unable to login when username and passwords are correct");
 	}
 	
-	@Test(priority=2, description="This is for login with invalid credentials", groups= {"regression"},retryAnalyzer=retry.Retry.class)
+	@Test(priority=2, description="This is for login with invalid credentials", groups= {"regression"},retryAnalyzer=Retry.class)
 	public void verifyLoginforCorrectUsernameAndIncorrectPassword() {
 		String username=ExcelUtility.getString(1, 2, "LoginPage");
 		String password=ExcelUtility.getString(1, 3, "LoginPage");
@@ -30,7 +28,7 @@ public class LoginTest extends Base{
 		assertTrue( isAlertThrown, "User does not get any red alert when username is correct and password is wrong");	
 	}
 	
-	@Test(priority=3, description="This is for login with invalid credentials", groups= {"regression"},retryAnalyzer=retry.Retry.class)
+	@Test(priority=3, description="This is for login with invalid credentials", groups= {"regression"},retryAnalyzer=Retry.class)
 	public void verifyLoginforIncorrectUsernameAndCorrectPassword() {
 		String username=ExcelUtility.getString(1, 2, "LoginPage");
 		String password=ExcelUtility.getString(1, 3, "LoginPage");
@@ -40,7 +38,7 @@ public class LoginTest extends Base{
 		assertTrue( isAlertThrown, "User does not get any red alert when username is correct and password is wrong");	
 	}
 	
-	@Test(priority=4,description="This is for login with invalid credentials", groups= {"regression"},retryAnalyzer=retry.Retry.class)
+	@Test(priority=4,description="This is for login with invalid credentials", groups= {"regression"},retryAnalyzer=Retry.class)
 	public void verifyLoginforIncorrectUsernameAndIncorrectPassword() {
 		String username=ExcelUtility.getString(1, 2, "LoginPage");
 		String password=ExcelUtility.getString(1, 3, "LoginPage");

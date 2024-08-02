@@ -57,8 +57,8 @@ public class ListProductsSearchPage {
     }
     
     public ListProductsSearchPage searchByProductId(String productid) {
-    	String replaceElement=productid;
-    	String xpathstring="//button[text()='"+replaceElement+"']/parent::td/following-sibling::td/a[contains(@href, 'delete') and contains(@onclick, 'delete')]";
+    	
+    	String xpathstring="//button[text()='"+productid+"']/parent::td/following-sibling::td/a[contains(@href, 'delete') and contains(@onclick, 'delete')]";
     	WebElement xpathwithproduct=driver.findElement(By.xpath(xpathstring));
     	xpathwithproduct.click();
     	return this;

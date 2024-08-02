@@ -2,7 +2,6 @@ package utilities;
 
 import java.time.Duration;
 import java.util.NoSuchElementException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class WaitUtility {
 	
 	public static final long EXPLICITWAIT=10;  
-	  public static final long IMPLICITWAIT=10;
+	public static final long IMPLICITWAIT=10;
 	  
 	public void explicitWaitToBeClicked(WebDriver driver, WebElement element) {
 	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));

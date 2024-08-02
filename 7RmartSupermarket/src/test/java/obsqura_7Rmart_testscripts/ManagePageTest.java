@@ -1,9 +1,7 @@
 package obsqura_7Rmart_testscripts;
 
 import static org.testng.Assert.assertTrue;
-
 import org.testng.annotations.Test;
-
 import pages.LoginPage;
 import pages.ManagePagesPage;
 import utilities.ExcelUtility;
