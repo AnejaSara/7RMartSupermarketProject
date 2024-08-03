@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-	<parameter name="Browser" value="chrome">	
+
+<suite name="Parallel_Testing" parallel="classes" thread-count="2">
+<parameter name="Browser" value="chrome">	
 </parameter>
-	<listeners>
+<listeners>
  <listener class-name="listeners.Listener"></listener>	
 </listeners>
+
   <test thread-count="5" name="Test">
-    <classes>
+    <classes>     
+     
       <class name="obsqura_7Rmart_testscripts.LoginTest">
-		<methods>
-			<include name="verifyLoginforCorrectUsernameAndCorrectPassword"/>
-			</methods>
-	  </class>
 		
-		
-	</classes>
+      </class> 
+      
+      <class name="obsqura_7Rmart_testscripts.LoginTest">		
+	  </class>  
+	     
+    </classes>
   </test> <!-- Test -->
+  
 </suite> <!-- Suite -->

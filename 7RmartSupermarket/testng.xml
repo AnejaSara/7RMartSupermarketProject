@@ -8,9 +8,9 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="obsqura_7Rmart_testscripts.LoginTest">
+      <class name="obsqura_7Rmart_testscripts.AdminUsersTest">
 		<methods>
-			<include name="verifyLoginforCorrectUsernameAndCorrectPassword"/>
+			<include name="verifyUserIsAbleToUpdateStatusOfAdminUser"/>
 			</methods>
 	  </class>
 		
