@@ -86,16 +86,20 @@ public boolean isSuccessAlertDisplayed() {
 public boolean getStatus(String statusupdateUsername) {
 	boolean status=false;
 	WebElement statusXpath=setUpXpathWith(statusupdateUsername);
+	System.out.println(statusXpath.getText());
 	if(statusXpath.getText()=="Active") 
+		{
 		status=true;
+		}
 	else if(statusXpath.getText()=="Inactive")
+		{
 		status=false;
+		}
 	return status;
 }
-
+ 
 public AdminUsersPage clickOnUpdateIcon(String statusupdateUsername) {
 	
-	pageutility.scrollPageDown(driver, 0, 350);
 	WebElement statusXpath=setUpXpathWith(statusupdateUsername);
 	waitutility=new WaitUtility();
 	waitutility.explicitWaitToBeVisible(driver, statusXpath);
@@ -105,7 +109,7 @@ public AdminUsersPage clickOnUpdateIcon(String statusupdateUsername) {
 
 public WebElement setUpXpathWith(String statusupdateUsername)
 {
-	String xpathstring="//tbody/tr[not(@class='detail-row')]/td[text()='"+statusupdateUsername+"']/following-sibling::td/a[not(@class)]/span[@class='badge bg-success']";
+	String xpathstring="//tbody/tr[not(@class='detail-row')]/td[text()='"+statusupdateUsername+"']/following-sibling::td/a[contains(@href,'https://groceryapp.uniqassosiates.com/admin/user/status?')]/span[@class='badge bg-success']";
 	WebElement xpathwithreplacement=driver.findElement(By.xpath(xpathstring));
 	return xpathwithreplacement;
 	}

@@ -51,12 +51,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\USER\git\7RMartSupermarketProject\7RmartSupermarket\Cross_Browsing_TestNG.xml</span>
+                    <span>C:\Users\USER\git\7RMartSupermarketProject\7RmartSupermarket\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="obsqura_7Rmart_testscripts.AdminUsersTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToUpdateStatusOfAdminUser">verifyUserIsAbleToUpdateStatusOfAdminUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -105,39 +119,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">obsqura_7Rmart_testscripts.AdminUsersTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserIsAbleToUpdateStatusOfAdminUser">
+                  </a> <!-- verifyUserIsAbleToUpdateStatusOfAdminUser -->
+                  <span class="method-name">verifyUserIsAbleToUpdateStatusOfAdminUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\USER\git\7RMartSupermarketProject\7RmartSupermarket\Cross_Browsing_TestNG.xml</span>
+            <span class="header-content">C:\Users\USER\git\7RMartSupermarketProject\7RmartSupermarket\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;listeners.Listener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;ChromeTest&quot;&gt;
-    &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;obsqura_7Rmart_testscripts.LoginTest&quot;&gt;
+      &lt;class name=&quot;obsqura_7Rmart_testscripts.AdminUsersTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifyUserLoginWithCorrectUsernameAndPassword&quot;/&gt;
+          &lt;include name=&quot;verifyUserIsAbleToUpdateStatusOfAdminUser&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- obsqura_7Rmart_testscripts.LoginTest --&gt;
+      &lt;/class&gt; &lt;!-- obsqura_7Rmart_testscripts.AdminUsersTest --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ChromeTest --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;EdgeTest&quot;&gt;
-    &lt;parameter name=&quot;Browser&quot; value=&quot;edge&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;obsqura_7Rmart_testscripts.LoginTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;verifyUserLoginWithCorrectUsernameAndPassword&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- obsqura_7Rmart_testscripts.LoginTest --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- EdgeTest --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,10 +168,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">ChromeTest (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">EdgeTest (1 class)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -178,12 +194,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyUserIsAbleToUpdateStatusOfAdminUser')
+data.setCell(0, 2, 'obsqura_7Rmart_testscripts.AdminUsersTest')
+data.setCell(0, 3, 3152);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -198,27 +218,13 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">8 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">obsqura_7Rmart_testscripts.LoginTest</span>
+              <span class="ignored-class-name">obsqura_7Rmart_testscripts.AdminUsersTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyLoginforIncorrectUsernameAndCorrectPassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginforIncorrectUsernameAndCorrectPassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginforIncorrectUsernameAndIncorrectPassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginforIncorrectUsernameAndIncorrectPassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginforCorrectUsernameAndCorrectPassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginforCorrectUsernameAndCorrectPassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginforCorrectUsernameAndIncorrectPassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginforCorrectUsernameAndIncorrectPassword</span>
+                <span class="ignored-method-name">verifyUserIsAbleToAddNewAdminUser</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -229,6 +235,20 @@ return data;
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">obsqura_7Rmart_testscripts.AdminUsersTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserIsAbleToUpdateStatusOfAdminUser</span>
+                <span class="method-start">2424 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=verifyUserIsAbleToUpdateStatusOfAdminUser status=SUCCESS method=AdminUsersTest.veri...)</span>
+                <span class="method-start">5588 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
