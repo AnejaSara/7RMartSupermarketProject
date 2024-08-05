@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="obsqura_7Rmart_testscripts.AdminUsersTest">
+      <class name="obsqura_7Rmart_testscripts.ManageContactTest">
         <methods>
           <include name="browserQuit"/>
-          <include name="verifyUserIsAbleToUpdateStatusOfAdminUser"/>
           <include name="initializeBrowser"/>
+          <include name="verifyUserIsAbleToUpdateContact"/>
         </methods>
-      </class> <!-- obsqura_7Rmart_testscripts.AdminUsersTest -->
+      </class> <!-- obsqura_7Rmart_testscripts.ManageContactTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

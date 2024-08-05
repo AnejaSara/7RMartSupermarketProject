@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -86,6 +87,8 @@ public class ExcelUtility {
 			
 			Row r = sh.getRow(i);
 			Cell c = r.getCell(j);
+			CellType celltype=c.getCellType();
+			System.out.println(celltype);
 			return c.getStringCellValue();
 		}
 }

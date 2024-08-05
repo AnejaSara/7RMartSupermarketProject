@@ -55,9 +55,11 @@ public class Base {
 			throw new Exception("Browser is not correct");
 		}
 		
-		driver.get(prop.getProperty("url")); 
+		//driver.get(prop.getProperty("url")); 
+		driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();    
+		driver.manage().window().maximize();  
+		
 	}
 	
 	@AfterMethod(alwaysRun = true)
