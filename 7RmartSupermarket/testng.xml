@@ -8,9 +8,9 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="obsqura_7Rmart_testscripts.ManageContactTest">
+      <class name="obsqura_7Rmart_testscripts.CategoriesTest">
 		<methods>
-			<include name="verifyUserIsAbleToUpdateContact"/>
+			<include name="verifyUserIsAbleToAddNewCategory"/>
 			</methods>
 	  </class>
 		

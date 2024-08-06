@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="obsqura_7Rmart_testscripts.ManageContactTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToUpdateContact">verifyUserIsAbleToUpdateContact</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="obsqura_7Rmart_testscripts.CategoriesTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToAddNewCategory">verifyUserIsAbleToAddNewCategory</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -122,23 +122,30 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">obsqura_7Rmart_testscripts.ManageContactTest</span>
+              <span class="class-name">obsqura_7Rmart_testscripts.CategoriesTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserIsAbleToUpdateContact">
-                  </a> <!-- verifyUserIsAbleToUpdateContact -->
-                  <span class="method-name">verifyUserIsAbleToUpdateContact</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (331, 707)
+                  <a name="verifyUserIsAbleToAddNewCategory">
+                  </a> <!-- verifyUserIsAbleToAddNewCategory -->
+                  <span class="method-name">verifyUserIsAbleToAddNewCategory</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;alert alert-success alert-dismissible&apos;]&apos; (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utilities.WaitUtility.explicitWaitToBeVisible(WaitUtility.java:31)
+	at pages.CategoriesPage.verifySuccessAlertThrown(CategoriesPage.java:85)
+	at obsqura_7Rmart_testscripts.CategoriesTest.verifyUserIsAbleToAddNewCategory(CategoriesTest.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-success alert-dismissible&apos;]&quot;}
   (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [65a0990fa08b78cef63d2a4b4608e081, clickElement {id=f.3143FB31CF766E828DDD22F8786EE105.d.3648B76C75ECA026F78E16D1E98C5690.e.81}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55600}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55600/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (65a0990fa08b78cef63d2a4b4608e081)] -&gt; xpath: //div[@class=&apos;card-footer center&apos;]/button[@type=&apos;submit&apos; and @name=&apos;Update&apos;]]
-Session ID: 65a0990fa08b78cef63d2a4b4608e081
+Command: [cf3f553aa5ed69dafa262ac17540bb0d, findElement {value=//div[@class=&apos;alert alert-success alert-dismissible&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49718}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49718/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cf3f553aa5ed69dafa262ac17540bb0d
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -146,14 +153,19 @@ Session ID: 65a0990fa08b78cef63d2a4b4608e081
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at pages.ManageContactPage.clickOnUpdateButton(ManageContactPage.java:83)
-	at obsqura_7Rmart_testscripts.ManageContactTest.verifyUserIsAbleToUpdateContact(ManageContactTest.java:30)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 31 more
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -175,11 +187,11 @@ Session ID: 65a0990fa08b78cef63d2a4b4608e081
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;obsqura_7Rmart_testscripts.ManageContactTest&quot;&gt;
+      &lt;class name=&quot;obsqura_7Rmart_testscripts.CategoriesTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifyUserIsAbleToUpdateContact&quot;/&gt;
+          &lt;include name=&quot;verifyUserIsAbleToAddNewCategory&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- obsqura_7Rmart_testscripts.ManageContactTest --&gt;
+      &lt;/class&gt; &lt;!-- obsqura_7Rmart_testscripts.CategoriesTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -221,14 +233,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserIsAbleToUpdateContact')
-data.setCell(0, 2, 'obsqura_7Rmart_testscripts.ManageContactTest')
-data.setCell(0, 3, 5935);
+data.setCell(0, 1, 'verifyUserIsAbleToAddNewCategory')
+data.setCell(0, 2, 'obsqura_7Rmart_testscripts.CategoriesTest')
+data.setCell(0, 3, 44818);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 44 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -254,7 +266,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">obsqura_7Rmart_testscripts.ManageContactTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">obsqura_7Rmart_testscripts.CategoriesTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowser(chrome)</span>
                 <span class="method-start">0 ms</span>
@@ -262,12 +274,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyUserIsAbleToUpdateContact</span>
-                <span class="method-start">3725 ms</span>
+                <span class="method-name">verifyUserIsAbleToAddNewCategory</span>
+                <span class="method-start">3647 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">browserQuit([TestResult name=verifyUserIsAbleToUpdateContact status=FAILURE method=ManageContactTest.verifyUserI...)</span>
-                <span class="method-start">9705 ms</span>
+                <span class="method-name">browserQuit([TestResult name=verifyUserIsAbleToAddNewCategory status=FAILURE method=CategoriesTest.verifyUserIsA...)</span>
+                <span class="method-start">48501 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

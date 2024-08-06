@@ -24,7 +24,7 @@ public class ManageContactPage {
 @FindBy(xpath="//textarea[@name='del_time' and @placeholder='Enter Delivery Time']") private WebElement deliveryTimeField;
 @FindBy(xpath="//input[@name='del_limit' and @name='del_limit']") private WebElement deliveryChargeField;
 @FindBy(xpath="//div[@class='card-footer center']/button[@type='submit' and @name='Update']") private WebElement updateButton;
-@FindBy(xpath="//div[@class=\"alert alert-success alert-dismissible\"]") private WebElement alertPath;
+@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") private WebElement alertPath;
 
 public ManageContactPage navigateToManageContact() {
 	WaitUtility waitutility=new WaitUtility();
